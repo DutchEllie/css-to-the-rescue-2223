@@ -1,0 +1,20 @@
+/* 
+This file is for general overrides as well as 
+for media queries that should override specific
+items throughout a page.
+*/
+
+@media (prefers-color-scheme: dark) {
+  header > button {
+    filter: invert();
+  }
+  section > button {
+    border: 2px solid var(--color-button-border);
+    border-radius: 0.75rem;
+  }
+
+  /* Guestbook comments */
+  main > article:nth-of-type(2) > section > article {
+    border: 2px solid var(--color-button-border);
+  }
+}
