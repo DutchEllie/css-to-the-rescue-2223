@@ -33,6 +33,12 @@ In week 2 ben ik aan het werk gegaan op woensdag.
 Ik begon met het maken van schetsen in mijn notitieboek hoe de pagina gestructureerd moet worden.
 Daarna heb ik het gemaakt in eerst HTML en daarna CSS.
 
+![Breakdown sketch](docs/breakdown.jpg)
+
+Voor het medium screen heb ik ook een schets gemaakt.
+
+![Medium screen sketch](docs/medium-screen.jpg)
+
 Ik begon met de homepagina.
 Ik heb hier eerst alle HTML geschreven aan de hand van mijn schetsen.
 Daarna heb ik de stylesheets gemaakt.
