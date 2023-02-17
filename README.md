@@ -1,5 +1,7 @@
 # CSS to the Rescue @cmda-minor-web 2022 - 2023
 
+Hier is de deployment: [Live Github Pages](https://css.quenten.nl)
+
 Dit is het vak CSS to the Rescue van de CMDA Minor Web Design and Development.
 Deze repository bevat alle code die ik heb geschreven hiervoor.
 Er zijn verschillende branches voor de features die ik heb gemaakt of de gefaalde experimenten.
