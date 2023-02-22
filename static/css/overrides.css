@@ -4,8 +4,16 @@ for media queries that should override specific
 items throughout a page.
 */
 
+/* #######################
+# ---- #NAVIGATION ----  #
+####################### */
+
+/* ##########################
+# ---- #MEDIA QUERIES ----  #
+########################## */
+
 @media (prefers-color-scheme: dark) {
-  header > button {
+  body > header > a {
     filter: invert();
   }
   section > button {

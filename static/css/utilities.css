@@ -1,0 +1,70 @@
+/* #########################
+# ---- #SKILLS BLOCK ----  #
+######################### */
+
+article[data-type="block"] {
+  background-color: var(--color-block-background);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: none;
+  gap: 0;
+  padding: 0.75rem;
+
+  border-radius: 0.75rem;
+}
+
+article[data-type="block"] > header {
+  background-color: var(--color-block-header-background);
+  padding: 0.75rem;
+
+  /* This is to eliminate the padding of the article on the header
+  I do this so I don't have to be special about the second block. */
+  margin: -0.75rem -0.75rem 0.75rem -0.75rem;
+
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+article[data-type="block"] > h2:not(:first-of-type) {
+  margin-top: 0.75rem;
+}
+
+/* #####################
+# ---- #GALAXIES ----  #
+##################### */
+
+article[data-type="galaxies"] {
+  display: block;
+  margin-top: 1rem;
+}
+
+article[data-type="galaxies"] > article {
+  background-color: var(--color-comment-background);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  padding: 0.50rem 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+article[data-type="galaxies"] > article > header {
+  display: flex;
+  background-color: var(--color-comment-header-background);
+  margin: -0.50rem -0.75rem 0.50rem -0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+article[data-type="galaxies"] > article > header > a {
+  flex-grow: 1;
+}
+
+article[data-type="galaxies"] > article > header > p {
+  color: crimson;
+}

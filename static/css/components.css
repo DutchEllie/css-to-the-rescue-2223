@@ -7,12 +7,13 @@ This is the style for the one on the top of the page
 For all of the other headers, there have to be more
 specific selectors. */
 body > header {
-  margin-top: 0.5rem;
-  padding: 0rem 2.25rem;
+  padding-top: 0.5rem;
+  padding-left:2.25rem;
+  padding-right: 2.2rem;
   text-align: center;
 }
 
-header > button {
+body > header > a {
   position: absolute;
   left: 0.5rem;
 
@@ -28,8 +29,10 @@ header > h1 {
   font-size: 1.5rem;
 }
 
-/* header */
-header > p {
+/* header
+Don't overwrite it everywhere, that would be a pain
+*/
+body > header > p {
   font-size: 0.75rem;
 }
 
@@ -91,6 +94,68 @@ section > h2 {
 
 section li::marker {
   color: var(--color-list-marker);
+}
+
+/* #######################
+# ---- #NAVIGATION ----  #
+####################### */
+
+nav {
+  display: none;
+}
+
+nav:target {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  gap: 1rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background-image: var(--gradient-background);
+  background-attachment: fixed;
+}
+
+body:has(:target) {
+  overflow: hidden;
+}
+
+nav > a {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat';
+  text-decoration-line: none;
+  padding: 0.5rem 1rem;
+
+}
+
+nav > a:not([aria-current="page"]) {
+  display: inline-block;
+  /* padding-bottom:2px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem; */
+  background-image: linear-gradient(var(--color-text) 0 0);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s;
+
+}
+
+nav > a:hover {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+
+nav > a[aria-current="page"] {
+  text-decoration-line: none;
+  border-bottom: 2px solid var(--color-text);
 }
 
 /* ######################
@@ -187,13 +252,16 @@ main > article:nth-of-type(2) > section > article > p {
 ########################### */
 
 main > header {
-  text-align: center;
 }
+
 main > header > h1 {
+  text-align: center;
   font-family: "Roboto Slab";
   font-weight: 700;
   text-shadow: 2px 2px gray;
   transition: text-shadow 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  margin-bottom: 1rem;
 }
 main > header > h1:hover {
   text-shadow: 5px 5px gray;
@@ -205,10 +273,31 @@ main > header > h3 {
   font-size: 1rem;
 }
 
+/* main > header > p {
+  margin-top
+} */
+
 /* hr following header */
 main > header + hr {
   border-color: black;
   border-width: 0px;
   border-top-width: 1px;
   margin-bottom: 1.5rem;
+}
+
+/* #########################
+# ---- #SKILLS TABLE ----  #
+######################### */
+
+table {
+  margin-left: 2rem;
+}
+
+td {
+  padding: 0;
+}
+
+table td:nth-child(2) {
+  filter: hue-rotate(170deg);
+  padding-left: 2rem;
 }
