@@ -90,6 +90,7 @@ article[data-type="galaxies"] > article > header > p {
   }
 }
 
+/* Desktop and larger */
 @media (min-width: 1024px) {
 
   /* ########################

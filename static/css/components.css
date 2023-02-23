@@ -126,6 +126,7 @@ nav:target {
   flex-direction: column;
   padding-top: 4rem;
   gap: 1rem;
+  z-index: 10;
 
   position: fixed;
   top: 0;
