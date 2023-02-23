@@ -24,39 +24,7 @@ body > header > a {
   background-color: transparent;
 }
 
-/* Close button */
-nav > a:first-of-type {
-  position: absolute;
-  top: -1rem;
-  left: 1rem;
-  width: fit-content;
-  padding: 0;
-
-  font-size: 4rem;
-}
-
-nav:has(input[value="right"]:checked) > a:first-of-type {
-  left: auto;
-  right: 1rem;
-}
-
-/* Handedness preference */
-nav h5 {
-  margin-top: 2rem;
-}
-nav label {
-  font-size: 1.2rem;
-}
-
-nav label > input {
-  transform: scale(1.2);
-}
-
-/* header > a:has(+div input[value="left"]:checked) {
-  left: 0.5rem;
-} */
-
-header > a:has(+div input[value="right"]:checked) {
+header:has(input[value="right"]:checked) > a {
   right: 0.5rem;
   left: auto;
 }
@@ -213,6 +181,35 @@ nav > a[aria-current="page"] {
   border-bottom: 2px solid var(--color-text);
 }
 
+/* Close button */
+nav > a:first-of-type {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  width: fit-content;
+  padding: 0;
+
+  font-size: 4rem;
+}
+
+nav:has(input[value="right"]:checked) > a:first-of-type {
+  left: auto;
+  right: 1rem;
+}
+
+/* Handedness preference */
+nav h5 {
+  margin-top: 2rem;
+}
+nav label {
+  font-size: 1.2rem;
+}
+
+nav label > input {
+  transform: scale(1.2);
+}
+
+
 /* ######################
 # ---- #GUESTBOOK ----  #
 ###################### */
@@ -242,11 +239,14 @@ input[type="text"]:focus {
 
 form {
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 textarea {
   resize: vertical;
   height: 3.75rem;
+  margin-bottom: 0.75rem;
 }
 
 input[type="submit"] {
@@ -255,10 +255,19 @@ input[type="submit"] {
   border-radius: 9999px;
 
   padding: 0.5rem 2.25rem;
+  max-width: fit-content;
+}
+
+body:has(input[value="right"]:checked) input[type="submit"] {
+  max-width: fit-content;
+  align-self: end;
 }
 
 main > article:nth-of-type(2) > section {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 button {
@@ -266,7 +275,17 @@ button {
   border: none;
   border-radius: 0.75rem;
   padding: 0.5rem 1.25rem;
+
+  margin-left: 0.65rem;
 }
+
+body:has(input[value="right"]:checked) main > article:nth-of-type(2) > section{
+  justify-content: end;
+}
+/* 
+body:has(input[value="right"]:checked) button {
+
+} */
 
 /* Guestbook comments */
 main > article:nth-of-type(2) > section > article {
@@ -275,10 +294,11 @@ main > article:nth-of-type(2) > section > article {
   grid-template-rows: min-content 1fr;
   border-radius: 0.25rem;
 
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   /* padding: 0.25rem 0.75rem; */
 
   background-color: var(--color-comment-background);
+  flex-grow: 1;
 }
 
 /* Header in a comment... This selector limitation

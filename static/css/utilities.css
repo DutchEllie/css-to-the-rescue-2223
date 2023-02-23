@@ -180,6 +180,24 @@ article[data-type="galaxies"] > article > header > p {
     grid-column: 2/7;
   }
 
+  /* ######################
+  # ---- #GUESTBOOK ----  #
+  ###################### */
+
+  body:has(input[value="right"]:checked) input[type="submit"] {
+    /* max-width: fit-content; */
+    align-self: start;
+  }
+
+  body:has(input[value="right"]:checked) main > article:nth-of-type(2) > section{
+    justify-content: start;
+  }
+
+  body:has(input[value="right"]:checked) button {
+    margin-left: 0rem;
+    margin-right: 0.65rem;
+  }
+
   /* ###############################
   # ---- #GUESTBOOK COMMENTS ----  #
   ############################### */
