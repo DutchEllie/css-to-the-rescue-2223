@@ -66,12 +66,6 @@ main {
   padding-bottom: 2rem;
 }
 
-/* TODO: Remove */
-/* main > article h2 {
-  font-weight: 700;
-  font-size: 1rem;
-} */
-
 main > article:first-of-type {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -295,18 +289,15 @@ main > header > h3 {
   font-family: "Roboto Slab";
   font-weight: 400;
   font-size: 1rem;
+  margin-bottom: 0.75rem;
 }
-
-/* main > header > p {
-  margin-top
-} */
 
 /* hr following header */
 main > header > hr {
-  border-color: black;
+  border-color: var(--color-text);
   border-width: 0px;
   border-top-width: 1px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* #########################
