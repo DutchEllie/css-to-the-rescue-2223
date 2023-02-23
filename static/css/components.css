@@ -123,24 +123,30 @@ section li::marker {
 ####################### */
 
 nav {
-  display: none;
-}
+  position: fixed;
+  transform-origin: 0 0;
+  transform: translateX(-100%);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
 
-nav:target {
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
   gap: 1rem;
-  z-index: 10;
 
-  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 100vh;
   height: 100%;
   background-image: var(--gradient-background);
   background-attachment: fixed;
+}
+
+/* The target state is in the overrides layer, because this selector has higher
+preference! */
+body:has(input[value="right"]:checked) nav {
+  transform: translateX(100%);
 }
 
 body:has(:target) {
