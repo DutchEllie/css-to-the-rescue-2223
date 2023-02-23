@@ -127,12 +127,18 @@ article[data-type="galaxies"] > article > header > p {
   # ---- #NAVIGATION ----  #
   ####################### */
 
+  /* Show navigation bar on larger screens */
   nav {
     display: block;
     grid-area: nav;
 
     align-self: end;
     padding-left: 6rem;
+  }
+
+  /* Hide hamburger menu */
+  body > header > a {
+    display: none;
   }
 
   /* #########################
