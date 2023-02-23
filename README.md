@@ -157,3 +157,92 @@ main > article h2 {
 
 Deze CSS is correct, maar onnodig.
 Ik had deze CSS net zo goed voor alle `h2` elementen kunnen laten gelden en deze in de `defaults.css` file kunnen plaatsen.
+
+## Week 3 - Donderdag
+
+Ik heb donderdag aan het begin van de dag wat gewerkt aan de layout van de large screen versie van de pagina.
+
+| Broken desktop   | Fixed desktop    |
+|--------------- | --------------- |
+| ![De desktop versie was broken](docs/broken-desktop.png) | ![De desktop versie is nu fixed](docs/fixed-desktop.png) |
+
+In de desktop versie worden er aan de homepagina twee sidebars (`<aside>` elementen) toegevoegd.
+De content in het midden wordt ook ietsje smaller, anders is het te breed.
+Andere kleine fixes zijn dat de hamburger menu wordt vervangen door een navigation bar, de titel wordt vergroot en er is een logo toegevoegd.
+
+De andere pagina's hebben ook een andere layout.
+De about pagina laat de grid layout iets meer doen.
+Het "skills" block wordt kleiner gemaakt en de tekst die op mobiel eronder staat, komt daar nu aan de rechter kant te staan.
+
+![Desktop about pagina](docs/desktop-about.png)
+
+De galaxies pagina is niet erg interessant.
+Het is in principe hetzelfde als de homepagina, maar zonder de sidebars.
+
+![Desktop galaxies pagina](docs/desktop-galaxies.png)
+
+### Leuke feature met checkboxes
+
+Op de homepagina van de website staat in de rechter sidebar een afbeelding van het meme karakter ["gigachad"](https://knowyourmeme.com/memes/gigachad).
+
+| Normaal | Na klik |
+| --- | --- |
+| ![Normaal gigachad](docs/normaal-gigachad.png) | ![Cursed gigachad](docs/cursed-gigachad.png) |
+
+Op mijn originele website wordt er geluisterd voor een klik event op de afbeelding en als er wordt geklikt worden de afbeelding en de ondertekst veranderd.
+Dit is een easter egg, zeker omdat het niet duidelijk is dat je erop kan klikken.
+
+Om deze functionaliteit na te maken met enkel CSS heb ik een `<input type="checkbox">` gebruikt.
+De code ziet er dan zo uit:
+
+```html
+<aside>
+  <label for="">
+    <input type="checkbox" />
+  </label>
+</aside>
+```
+
+```css
+main > aside:nth-of-type(2) > label {
+  display: block;
+  text-align: center;
+
+  margin-top: 2rem;
+}
+
+main > aside:nth-of-type(2) > label::after {
+  content: 'yes, i love japanese stuff, how can you tell?';
+}
+
+main > aside:nth-of-type(2) > label > input[type="checkbox"] {
+  appearance: none;
+  content: url('/static/images/literallyme.jpg');
+  border-radius: 0.25rem;
+  max-width: 100%;
+}
+
+main > aside:nth-of-type(2) > label > input[type="checkbox"]:focus {
+  outline: none;
+}
+
+main > aside:nth-of-type(2) > label > input[type="checkbox"]:focus-visible {
+  outline: auto;
+}
+
+main > aside:nth-of-type(2) > label > input[type="checkbox"]:checked {
+  content: url('/static/images/whydidyoudothis.png');
+}
+
+main > aside:nth-of-type(2) > label:has(:checked)::after {
+  content: 'oh god, what have you done?! TAKE IT AWAY!';
+}
+```
+
+Het is een beetje veel CSS, maar er moeten ook veel dingen worden gestijlt.
+De label krijgt `display: block`, zodat de `text-align: center` werkt, normaal werkt dat niet omdat een label standaard `display: inline` is.
+De `::after` op de label wordt gezet op de tekst die er moet staan als er niks is gebeurt.
+De input wordt gestijlt en de initiele afbeelding wordt geplaatst.
+Daarna krijg je dingen voor de focus states, voor als iemand based is en geen muis heeft.  
+Na de focus states krijg je de magie.
+De `:checked` checkbox krijgt een nieuwe content en de `:has()` pseudo-class wordt gebruikt om de content van de label te veranderen.

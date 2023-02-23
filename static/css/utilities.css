@@ -264,10 +264,7 @@ article[data-type="galaxies"] > article > header > p {
   }
 
   main > aside:nth-of-type(2) > label > input[type="checkbox"]:checked {
-    appearance: none;
     content: url('/static/images/whydidyoudothis.png');
-    max-width: 100%;
-    border: none;
   }
 
   main > aside:nth-of-type(2) > label:has(:checked)::after {
