@@ -24,6 +24,43 @@ body > header > a {
   background-color: transparent;
 }
 
+/* Close button */
+nav > a:first-of-type {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  width: fit-content;
+  padding: 0;
+
+  font-size: 4rem;
+}
+
+nav:has(input[value="right"]:checked) > a:first-of-type {
+  left: auto;
+  right: 1rem;
+}
+
+/* Handedness preference */
+nav h5 {
+  margin-top: 2rem;
+}
+nav label {
+  font-size: 1.2rem;
+}
+
+nav label > input {
+  transform: scale(1.2);
+}
+
+/* header > a:has(+div input[value="left"]:checked) {
+  left: 0.5rem;
+} */
+
+header > a:has(+div input[value="right"]:checked) {
+  right: 0.5rem;
+  left: auto;
+}
+
 /* header */
 header h1 {
   font-size: 1.5rem;

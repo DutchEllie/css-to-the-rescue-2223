@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script src="static/app.js" defer></script>
     <title>About</title>
   </head>
   <body>
@@ -18,9 +19,21 @@
         <h1>Internetica Galactica 2</h1>
         <p>Surviving the rewriting</p>
         <nav id="navigation">
+          <a href="#">&times;</a>
           <a href="/">Home</a>
           <a href="/about.html" aria-current="page">About</a>
           <a href="/galaxies.html">Galaxies</a>
+          <div>
+            <h5>Which hand do you prefer?</h5>
+            <label>
+              Left
+              <input type="radio" name="preferred_hand" value="left" />
+            </label>
+            <label>
+              Right
+              <input type="radio" name="preferred_hand" value="right" />
+            </label>
+          </div>
         </nav>
       </div>
     </header>

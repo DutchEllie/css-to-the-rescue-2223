@@ -138,6 +138,14 @@ article[data-type="galaxies"] > article > header > p {
     padding-left: 6rem;
   }
 
+  nav > a:first-of-type {
+    display: none;
+  }
+
+  nav > div {
+    display: none;
+  }
+
   /* Hide hamburger menu */
   body > header > a {
     display: none;
