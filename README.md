@@ -104,7 +104,7 @@ Omdat dit eigenlijk om de opdracht heen werken is mag dit niet, hoewel het wel e
 ### Experimenten
 
 Ik heb geprobeert om CSS nesting te gebruiken.
-Ik heb bijvoorbeeld de volgende code geschreven: 
+Ik heb bijvoorbeeld de volgende code geschreven:
 
 ```css
 main > header {
@@ -140,8 +140,20 @@ Ik heb hier echter een paar dingen uitgevonden.
 Nesting is best wel cool, maar de CSS wordt er niet altijd meer leesbaar van.
 Ik vindt het vooral handig voor dingen als `:hover` of andere states, maar voor dingen als items eronder selecteren wordt het vrij onoverzichtelijk.
 
+## Week 3 - Woensdag
 
-### Probleem 2 - Custom sections
+Ik heb woensdag gewerkt aan het maken van de about en galaxies pagina van mijn website.
+Deze pagina's waren erg snel te maken, met minimale hindernissen.
+Dit kwam voornamelijk omdat de CSS erg goed opgemaakt was en dus niet heel veel werk nodig had.
+Er waren wel een aantal kleine dingetjes die ik tijdens het maken bedacht die ik toen heb veranderd.
+Dit was bijvoorbeeld de CSS voor de `h2`:
 
-Op mijn originele website zijn er een aantal verschillende stijlen en verschillende layout keuzes die iets lastiger over te zetten zijn in dit geval.
-Een voorbeeld hiervan is de outlining van 
+```css
+main > article h2 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+```
+
+Deze CSS is correct, maar onnodig.
+Ik had deze CSS net zo goed voor alle `h2` elementen kunnen laten gelden en deze in de `defaults.css` file kunnen plaatsen.
