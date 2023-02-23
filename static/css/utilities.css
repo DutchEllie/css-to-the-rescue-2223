@@ -89,6 +89,12 @@ article[data-type="galaxies"] > article > header > p {
     border: 2px solid var(--color-button-border);
   }
 }
+/* 
+@media (scripting: none) {
+  nav > div > h5 {
+    background-color: blue;
+  }
+} */
 
 /* Desktop and larger */
 @media (min-width: 1024px) {
