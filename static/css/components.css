@@ -282,10 +282,11 @@ button {
 body:has(input[value="right"]:checked) main > article:nth-of-type(2) > section{
   justify-content: end;
 }
-/* 
-body:has(input[value="right"]:checked) button {
 
-} */
+body:has(input[value="left"]:checked) button {
+  margin-left: 0rem;
+  margin-right: 0.65rem;
+}
 
 /* Guestbook comments */
 main > article:nth-of-type(2) > section > article {

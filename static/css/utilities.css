@@ -189,13 +189,8 @@ article[data-type="galaxies"] > article > header > p {
     align-self: start;
   }
 
-  body:has(input[value="right"]:checked) main > article:nth-of-type(2) > section{
+  body:has(input[value="right"]:checked) main > article:nth-of-type(2) > section {
     justify-content: start;
-  }
-
-  body:has(input[value="right"]:checked) button {
-    margin-left: 0rem;
-    margin-right: 0.65rem;
   }
 
   /* ###############################
