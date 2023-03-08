@@ -247,7 +247,7 @@ Daarna krijg je dingen voor de focus states, voor als iemand based is en geen mu
 Na de focus states krijg je de magie.
 De `:checked` checkbox krijgt een nieuwe content en de `:has()` pseudo-class wordt gebruikt om de content van de label te veranderen.
 
-### Week 4 - Woensdag
+## Week 4 - Woensdag
 
 Dit is de dag voor de beoordeling, dus ik moet het vandaag afmaken en inleveren.
 Voordat ik dit doe zijn er 4 dingen die ik moet doen:
@@ -268,7 +268,7 @@ Er zijn zeker weten properties die ergens anders kunnen worden geplaatst of over
 
 Als laatste moet dit document afgemaakt worden voordat ik het inlever.
 
-#### Hamburger menu pijn
+### Hamburger menu pijn
 
 De hamburger menu begint wanneer de pagina is geladen in het midden van de pagina, en wordt vervolgens getranslate naar de gekozen kant van de pagina.
 Dit is natuurlijk slecht.
@@ -276,7 +276,7 @@ Dit is natuurlijk slecht.
 Na veel geexperimenteer heb ik opgegeven om dat op te lossen.
 Alles is vreselijk en ik wil niet meer.
 
-#### Navigatie op desktop
+### Navigatie op desktop
 
 Toen ik de hamburger navigatie had "gefixt" (1 bug uitgewisseld voor een nieuwe) werkte de desktop versie niet meer.
 Het was niet zichtbaar.
@@ -285,7 +285,23 @@ Dat was omdat de properties van de hamburger versie van de navigatie waren verpl
 Dit zorgde ervoor dat het `nav` element altijd werd getranslate naar offscreen en er was een vreselijke padding.
 Dit heb ik in de media query overschreven en daarna werkte het weer.
 
-#### Opschoning CSS
+## Conclusie
 
-Lijst van verantwoordingen:
+In deze opdracht heb ik mij verdiept in het gebruik van vanilla CSS om een project met Tailwind na te maken.
+Ik heb een hoop geleerd dat ik zeker ga toepassen in de toekomst, maar het is niet zo cut and dry.
 
+De grootste ergernis van de opdracht was zeker de limitatie dat je geen class of id selectors mocht gebruiken.
+Dit was een slimme limitatie, ik heb namelijk een hoop geleerd van selectors dat ik nog niet wist, maar het zorgde zeker voor een hoop problemen.
+Veel properties van `article` elementen worden op de home pagina overschreven, maar dit zorgt ervoor dat ik op de andere pagina's meer werk moet doen dan anders nodig was om de properties te resetten.
+
+Tailwind maakt het heel makkelijk om zonder al te veel gedoe de styling te maken en dat responsive te maken.
+Je hoeft niet na te denken over mogelijke inheritance problemen, resets, structuur of het verlies van overzicht dat je snel krijgt met grote CSS bestanden.
+
+Ik vind het lastig om een van de twee te kiezen.
+Het zal liggen aan het project waar ik aan werk welk systeem ik wil gebruiken.
+Als ik coole dingen met CSS wil doen dan zal ik vanilla CSS gebruiken, maar als ik snel iets groots wil maken dan zal ik Tailwind doen.
+
+Tailwind is goed om grote projecten te organiseren die je snel moet maken, waar je geen tijd hebt om na te denken over de CSS structuur.
+Dit is dus perfect voor persoonlijke projecten die niet veel uitmaken.
+
+Vanilla CSS is beter voor coole dingen of grote projecten waar ik langer aan zit, en dus wel de tijd hebt om na te denken over de CSS structuur.
