@@ -246,3 +246,24 @@ De input wordt gestijlt en de initiele afbeelding wordt geplaatst.
 Daarna krijg je dingen voor de focus states, voor als iemand based is en geen muis heeft.  
 Na de focus states krijg je de magie.
 De `:checked` checkbox krijgt een nieuwe content en de `:has()` pseudo-class wordt gebruikt om de content van de label te veranderen.
+
+### Week 4 - Woensdag
+
+Dit is de dag voor de beoordeling, dus ik moet het vandaag afmaken en inleveren.
+Voordat ik dit doe zijn er 4 dingen die ik moet doen:
+
+1. De hamburger menu fixen
+2. De navigatie op desktop fixen
+3. De CSS opschonen
+4. README afmaken
+
+De hamburger menu heeft op dit moment een bug dat het wordt gerenderd op de pagina en daarna pas naar de zijkant van de pagina wordt getranslate.
+Dit kan natuurlijk niet, deze moet beginnen aan de juiste kant van de pagina.
+Ik heb alleen geen idee hoe ik dit kan oplossen.
+
+De navigatie op de desktop versie van de website is verdwenen.
+
+De CSS moet worden opgeschoond.
+Er zijn zeker weten properties die ergens anders kunnen worden geplaatst of overbodig zijn, dus daar moet ik wat aan doen.
+
+Als laatste moet dit document afgemaakt worden voordat ik het inlever.

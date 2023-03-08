@@ -137,11 +137,22 @@ article[data-type="galaxies"] > article > header > p {
 
   /* Show navigation bar on larger screens */
   nav {
-    display: block;
+    display: flex;
+    flex-direction: row;
     grid-area: nav;
+    position: initial;
 
-    align-self: end;
+    transform: none;
+    transition: none;
+    width: 100%;
+    padding-top: 0px;
+
     padding-left: 6rem;
+  }
+
+  nav > a {
+    height: fit-content;
+    align-self: end;
   }
 
   nav > a:first-of-type {
