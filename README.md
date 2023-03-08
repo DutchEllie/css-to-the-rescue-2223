@@ -267,3 +267,20 @@ De CSS moet worden opgeschoond.
 Er zijn zeker weten properties die ergens anders kunnen worden geplaatst of overbodig zijn, dus daar moet ik wat aan doen.
 
 Als laatste moet dit document afgemaakt worden voordat ik het inlever.
+
+#### Hamburger menu pijn
+
+De hamburger menu begint wanneer de pagina is geladen in het midden van de pagina, en wordt vervolgens getranslate naar de gekozen kant van de pagina.
+Dit is natuurlijk slecht.
+
+Na veel geexperimenteer heb ik opgegeven om dat op te lossen.
+Alles is vreselijk en ik wil niet meer.
+
+#### Navigatie op desktop
+
+Toen ik de hamburger navigatie had "gefixt" (1 bug uitgewisseld voor een nieuwe) werkte de desktop versie niet meer.
+Het was niet zichtbaar.
+
+Dat was omdat de properties van de hamburger versie van de navigatie waren verplaatst van de `:checked` selector naar de standaard `nav` selector.
+Dit zorgde ervoor dat het `nav` element altijd werd getranslate naar offscreen en er was een vreselijke padding.
+Dit heb ik in de media query overschreven en daarna werkte het weer.
