@@ -15,10 +15,4 @@ priority. So this requires either !important or put it in a different layer */
 
 body nav:target {
   transform: translateX(0%);
-  /* transition-duration: 500ms;
-  transition-timing-function: ease-out; */
 }
-
-/* body:has(input[value="right"]:checked) nav:target {
-  transform: translateX(-100%);
-} */

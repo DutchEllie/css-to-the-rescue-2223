@@ -284,3 +284,8 @@ Het was niet zichtbaar.
 Dat was omdat de properties van de hamburger versie van de navigatie waren verplaatst van de `:checked` selector naar de standaard `nav` selector.
 Dit zorgde ervoor dat het `nav` element altijd werd getranslate naar offscreen en er was een vreselijke padding.
 Dit heb ik in de media query overschreven en daarna werkte het weer.
+
+#### Opschoning CSS
+
+Lijst van verantwoordingen:
+

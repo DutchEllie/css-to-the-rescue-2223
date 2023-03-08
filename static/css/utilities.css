@@ -1,3 +1,8 @@
+/*
+The articles are overwritten here in this layer.
+That is because the components layer already defines the articles and placing those there doesn't work.
+*/
+
 /* #########################
 # ---- #SKILLS BLOCK ----  #
 ######################### */
@@ -26,11 +31,6 @@ article[data-type="block"] > header {
   border-top-right-radius: 0.75rem;
 }
 
-/* TODO: Figure out where this is used */
-/* article[data-type="block"] > h2:not(:first-of-type) {
-  margin-top: 0.75rem;
-} */
-
 /* #####################
 # ---- #GALAXIES ----  #
 ##################### */
@@ -54,10 +54,7 @@ article[data-type="galaxies"] > article > header {
   display: flex;
   background-color: var(--color-comment-header-background);
   margin: -0.5rem -0.75rem 0.5rem -0.75rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -89,16 +86,9 @@ article[data-type="galaxies"] > article > header > p {
     border: 2px solid var(--color-button-border);
   }
 }
-/* 
-@media (scripting: none) {
-  nav > div > h5 {
-    background-color: blue;
-  }
-} */
 
 /* Desktop and larger */
 @media (min-width: 1024px) {
-
   /* ########################
   # ---- #PAGE HEADER ----  #
   ######################## */
@@ -107,7 +97,7 @@ article[data-type="galaxies"] > article > header > p {
     display: grid;
     grid-template-columns: min-content auto 1fr;
     grid-template-rows: 1fr min-content;
-    grid-template-areas: 
+    grid-template-areas:
       "logo title nav"
       "logo subtitle nav";
     width: fit-content;
@@ -150,15 +140,18 @@ article[data-type="galaxies"] > article > header > p {
     padding-left: 6rem;
   }
 
+  /* Resetting the pain that happens in components.css */
   nav > a {
     height: fit-content;
     align-self: end;
   }
 
+  /* Hides the hamburger close button */
   nav > a:first-of-type {
     display: none;
   }
 
+  /* Hides the handedness selector */
   nav > div {
     display: none;
   }
@@ -200,14 +193,17 @@ article[data-type="galaxies"] > article > header > p {
     align-self: start;
   }
 
-  body:has(input[value="right"]:checked) main > article:nth-of-type(2) > section {
+  body:has(input[value="right"]:checked)
+    main
+    > article:nth-of-type(2)
+    > section {
     justify-content: start;
   }
 
   /* ###############################
   # ---- #GUESTBOOK COMMENTS ----  #
   ############################### */
-  
+
   /* Set guestbook comments header to spread out the author and time fields to
   outsides of the header */
   main > article:nth-of-type(2) > section > article > header {
@@ -233,7 +229,7 @@ article[data-type="galaxies"] > article > header > p {
     grid-column: 3/7;
     grid-row: 1/2;
   }
-  
+
   /* the nth-of-type pseudo-class doesn't respect the attribute selector */
   /* But also, leaving out the pseudo-class selects the third guestbook comment
   on the homepage */
@@ -258,7 +254,10 @@ article[data-type="galaxies"] > article > header > p {
     grid-template-rows: min-content auto;
 
     column-gap: 0.75rem;
-    /* row-gap is here because the CSS from another article breaks this */
+    /* 
+    row-gap is here because the CSS from another article breaks this 
+    Isn't that painful?
+    */
     row-gap: 0rem;
   }
 
@@ -309,12 +308,12 @@ article[data-type="galaxies"] > article > header > p {
   }
 
   main > aside:nth-of-type(2) > label::after {
-    content: 'yes, i love japanese stuff, how can you tell?';
+    content: "yes, i love japanese stuff, how can you tell?";
   }
 
   main > aside:nth-of-type(2) > label > input[type="checkbox"] {
     appearance: none;
-    content: url('/static/images/literallyme.jpg');
+    content: url("/static/images/literallyme.jpg");
     border-radius: 0.25rem;
     max-width: 100%;
   }
@@ -329,11 +328,10 @@ article[data-type="galaxies"] > article > header > p {
   }
 
   main > aside:nth-of-type(2) > label > input[type="checkbox"]:checked {
-    content: url('/static/images/whydidyoudothis.png');
+    content: url("/static/images/whydidyoudothis.png");
   }
 
   main > aside:nth-of-type(2) > label:has(:checked)::after {
-    content: 'oh god, what have you done?! TAKE IT AWAY!';
+    content: "oh god, what have you done?! TAKE IT AWAY!";
   }
-
 }
